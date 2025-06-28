@@ -2,7 +2,7 @@
 
 > An intelligent, full-stack music recommendation web app that detects your mood using AI and offers curated Spotify tracks — now enhanced with a mental wellness chatbot, real-time insights, and secure user sessions.
 
-![musical-mind-banner](./assets/banner.png)
+![musical-mind-banner](./moodify/src/assets/Screenshot%20(196).png)
 
 ---
 
@@ -95,9 +95,6 @@ For example:
 
 ## 🛠 System Architecture
 
-txt
-Copy
-Edit
 [ React UI ]
      |
      ↓
@@ -117,72 +114,67 @@ Edit
      |
      ↓
 [ AI Chatbot ]
-🧪 Example User Flow
-👤 User signs up or logs in.
 
-✍️ Enters mood in natural language.
+## 🧪 Example User Flow
 
-🤖 Google Gemini detects emotional state.
+- 👤 User signs up or logs in.
 
-🔁 Mood Uplifter Logic determines final target mood.
+- ✍️ Enters mood in natural language.
 
-🎧 Spotify API fetches 5 tracks for that vibe.
+- 🤖 Google Gemini detects emotional state.
 
-💾 Mood + songs saved in Firebase DB.
+- 🔁 Mood Uplifter Logic determines final target mood.
 
-📈 Graphical insights generated from history.
+- 🎧 Spotify API fetches 5 tracks for that vibe.
 
-💬 User chats with AI-powered mental health bot.
+- 💾 Mood + songs saved in Firebase DB.
 
-🔄 User repeats whenever needed — building a mood profile.
+- 📈 Graphical insights generated from history.
 
-🌐 Environment Variables (.env example)
-env
-Copy
-Edit
-VITE_GEMINI_API_KEY=your-gemini-api-key
-VITE_SPOTIFY_CLIENT_ID=your-client-id
-VITE_SPOTIFY_CLIENT_SECRET=your-client-secret
-VITE_FIREBASE_CONFIG=your-firebase-config-json
-VITE_API_URL=http://localhost:5000
-🔐 Security Practices
-JWT tokens securely stored in localStorage.
+- 💬 User chats with AI-powered mental health bot.
 
-All protected endpoints validate token on each request.
+- 🔄 User repeats whenever needed — building a mood profile.
 
-Spotify credentials Base64 encoded.
+## 🌐 Environment Variables (.env example)
 
-Firebase rules restrict write/read access to authenticated users only.
+- VITE_GEMINI_API_KEY=your-gemini-api-key
+- VITE_SPOTIFY_CLIENT_ID=your-client-id
+- VITE_SPOTIFY_CLIENT_SECRET=your-client-secret
+- VITE_FIREBASE_CONFIG=your-firebase-config-json
+- VITE_API_URL=http://localhost:5000
 
-📷 UI Snapshots (Placeholders)
-Add actual images in ./screenshots folder and reference them here:
+## 🔐 Security Practices
 
-Page	Screenshot
+- JWT tokens securely stored in localStorage.
+
+- All protected endpoints validate token on each request.
+
+- Spotify credentials Base64 encoded.
+
+- Firebase rules restrict write/read access to authenticated users only.
+
+<!-- ## 📷 UI Snapshots (Placeholders)
 Dashboard	
 Mood Input	
 Songs List	
 Insights	
-Chatbot	
+Chatbot	 -->
 
-🔁 Setup Instructions
-bash
-Copy
-Edit
-# 1. Clone the repo
+## 🔁 Setup Instructions
+
+### 1. Clone the repo
 git clone https://github.com/your-username/musical-mind.git
 cd musical-mind
 
-# 2. Install dependencies
+### 2. Install dependencies
 npm install
 
-# 3. Add environment variables in `.env`
+### 3. Add environment variables in `.env`
 
-# 4. Run the app
+### 4. Run the app
 npm run dev
-📦 Folder Structure
-pgsql
-Copy
-Edit
+
+## 📦 Folder Structure
 musical-mind/
 ├── public/
 ├── src/
@@ -196,22 +188,24 @@ musical-mind/
 ├── .env
 ├── index.html
 ├── package.json
-📈 Future Enhancements
-🎤 Voice input fully integrated.
 
-📑 Daily quotes & affirmations.
 
-📱 Mobile PWA version.
+## 📈 Future Enhancements
+- 🎤 Voice input fully integrated.
 
-🧠 Facial emotion detection (via webcam).
+- 📑 Daily quotes & affirmations.
 
-🗣 Multi-language support.
+- 📱 Mobile PWA version.
 
-📄 License
-Licensed under MIT.
+- 🧠 Facial emotion detection (via webcam).
 
-👨‍💻 Developed By
-Pranav Kumar
-Artificial Intelligence & Machine Learning Engineer
-GitHub • LinkedIn
+- 🗣 Multi-language support.
+
+<!-- 📄 License
+Licensed under MIT. -->
+
+# 👨‍💻 Developed By
+- Pranav Kumar
+- Artificial Intelligence & Machine Learning Engineer
+<!-- GitHub • LinkedIn -->
 
