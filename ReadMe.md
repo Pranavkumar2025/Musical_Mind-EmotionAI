@@ -2,7 +2,7 @@
 
 > An intelligent, full-stack music recommendation web app that detects your mood using AI and offers curated Spotify tracks — now enhanced with a mental wellness chatbot, real-time insights, and secure user sessions.
 
-![musical-mind-banner](./assets/banner.png) <!-- Optional banner image -->
+![musical-mind-banner](./assets/banner.png)
 
 ---
 
@@ -25,82 +25,76 @@ To build a **personalized music platform** that:
 
 ## 🎯 Core Features
 
-### 🧠 1. **AI-Powered Mood Detection**
-- Uses **Google Gemini API** to analyze user input text.
-- Detects primary emotional state: _happy, sad, angry, calm, excited, etc._.
-- Optional voice input via **Web Speech API** for hands-free use.
+### 🧠 1. AI-Powered Mood Detection
+- Uses Google Gemini API to analyze user input.
+- Detects emotional states: happy, sad, angry, calm, excited, etc.
+- Supports optional voice input via Web Speech API.
 
-### 🎵 2. **Spotify-Based Music Recommendations**
-- Fetches **top 5 tracks** from Spotify based on the detected or uplifted mood.
-- Uses **Spotify Client Credentials Flow** for secure API access.
-- Songs are playable and linked directly to Spotify.
+### 🎵 2. Spotify-Based Music Recommendations
+- Retrieves top 5 tracks based on the detected mood.
+- Uses Spotify Client Credentials Flow for secure API access.
+- Users can play songs or open directly in Spotify.
 
-### 💫 3. **Mood Uplifter Logic**
-A unique feature that remaps negative emotions into positive music moods:
+### 💫 3. Mood Uplifter Logic
 
-```js
-const moodMap = {
-  "sad": "happy",
-  "happy": "excited",
-  "calm": "positive",
-  "angry": "chill",
-  "excited": "party"
-};
+A unique mapping system converts negative emotions into more positive moods.  
+For example:
+- Sad → Happy  
+- Angry → Chill  
+- Calm → Positive  
+- Happy → Excited  
+- Excited → Party
+
 “If you’re sad, we’ll play happy — if you’re angry, we’ll calm you.”
 
-🔐 4. User Authentication & Session Management
-Secure signup/login with MongoDB + JWT.
+### 🔐 4. User Authentication & Session Management
+- Secure login and signup using MongoDB and JWT.
+- Tokens stored in localStorage.
+- Protected routes for dashboard, chatbot, and insights.
 
-Tokens stored in localStorage and attached to all secure endpoints.
+### ☁️ 5. Mood History Tracking (Firebase)
+- Saves every mood detection event for the logged-in user.
+- Uses Firebase Realtime Database for structured storage.
 
-Protected dashboard, chatbot, and insights routes.
+### 📊 6. Mood Insights Dashboard
+- Visualizes user mood trends using Chart.js or Recharts.
+- Helps users understand and reflect on their emotional patterns.
 
-☁️ 5. Mood History Tracking (via Firebase)
-Each mood detection event is saved under the logged-in user.
+### 🤖 7. Mental Wellness Chatbot
+- Friendly chatbot for self-help and encouragement.
+- Uses AI-generated responses via Gemini or GPT models.
 
-Uses Firebase Realtime Database for structured storage.
+### 🎤 8. Voice Input (Planned/Optional)
+- Converts speech to text using Web Speech API.
+- Detects emotion from spoken words.
 
-Enables insights and personal emotional timeline.
+### 📢 9. Social Sharing (Optional)
+- Share mood and recommended music on social media.
 
-📊 6. Mood Insights Dashboard
-Graphical reports on mood frequency and progression.
+### 📑 10. Daily Quote (Planned)
+- Display motivational quotes relevant to current mood.
 
-Uses Chart.js / Recharts for dynamic visualizations.
+---
 
-Helps users reflect on emotional patterns.
+## 🔧 Tech Stack Overview
 
-🤖 7. Mental Wellness Chatbot
-Built-in chatbot for self-help, encouragement, and emotional advice.
+| Category               | Technology               |
+|------------------------|---------------------------|
+| Frontend               | React.js                 |
+| Styling                | Tailwind CSS             |
+| State Management       | useState, Context API    |
+| Mood Detection         | Google Gemini API        |
+| Music API              | Spotify Web API          |
+| Authentication         | MongoDB, JWT             |
+| Mood Storage           | Firebase Realtime DB     |
+| Graphing               | Chart.js / Recharts      |
+| Voice Input            | Web Speech API (optional)|
+| Chatbot                | Gemini/GPT               |
 
-Users can type problems or emotions and receive helpful responses.
+---
 
-Uses AI-powered generative models (e.g., Gemini).
+## 🛠 System Architecture
 
-🎤 8. Voice Input (Planned/Optional)
-Convert voice to text using Web Speech API.
-
-Automatically analyze spoken input for mood detection.
-
-📢 9. Social Sharing (Optional)
-Share mood and music recommendations on social media.
-
-📑 10. Daily Quote (Planned)
-Display a motivational quote related to current mood.
-
-🔧 Tech Stack Overview
-Category	Technology
-Frontend	React.js
-Styling	Tailwind CSS
-State Management	useState, Context API
-Mood Detection	Google Gemini API
-Music Recommendation	Spotify Web API
-Auth	MongoDB, JWT
-Mood History Storage	Firebase Realtime DB
-Graphing	Chart.js / Recharts
-Voice Input (Optional)	Web Speech API
-Chatbot	Gemini/GPT-powered AI
-
-🛠 System Architecture
 txt
 Copy
 Edit
