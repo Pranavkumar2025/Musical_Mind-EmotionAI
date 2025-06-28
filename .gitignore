@@ -1,0 +1,5 @@
+# Ignore .env in frontend and backend
+moodify/.env
+moodify/.env.local
+moodify Backend/.env
+moodify Backend/.env.local
