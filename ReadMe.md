@@ -1,3 +1,5 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # 🎶 Musical Mind — AI-Powered Mood-Based Music Recommender
 
 > An intelligent, full-stack music recommendation web app that detects your mood using AI and offers curated Spotify tracks — now enhanced with a mental wellness chatbot, real-time insights, and secure user sessions.
