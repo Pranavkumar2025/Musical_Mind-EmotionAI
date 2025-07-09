@@ -11,11 +11,13 @@ const PORT = process.env.PORT || 5000;
 const CLIENT_URL = process.env.CLIENT_URL || 'http://localhost:5173';
 
 // Middleware
+const allowedOrigin = process.env.CLIENT_URL?.replace(/\/$/, ''); // Remove trailing slash
+
 app.use(cors({
-  origin: CLIENT_URL,
-  credentials: true
+  origin: allowedOrigin,
+  credentials: true,
 }));
-app.use(express.json());
+
 
 // Routes
 app.use('/api/auth', authRoutes);
